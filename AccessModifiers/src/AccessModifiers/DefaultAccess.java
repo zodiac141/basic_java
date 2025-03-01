@@ -1,4 +1,4 @@
-package DefaultAccess;
+package AccessModifiers;
 
 class DefaultAccess {  // Default access class (Only accessible within the same package)
 

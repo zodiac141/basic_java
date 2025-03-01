@@ -1,4 +1,4 @@
-package DefaultAccess;
+package AccessModifiers;
 
 public class TestAccess {
     public static void main(String[] args) {

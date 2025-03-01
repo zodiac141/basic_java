@@ -1,4 +1,4 @@
-package DefaultAccess;
+package AccessModifiers;
 
 class SubClass extends DefaultAccess {  // Inherits from DefaultAccess
 
