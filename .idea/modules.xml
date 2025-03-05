@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/AccessModifiers/DefaultAccess.iml" filepath="$PROJECT_DIR$/AccessModifiers/DefaultAccess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/methodsreview/MethodsReview.iml" filepath="$PROJECT_DIR$/methodsreview/MethodsReview.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic_java.iml" filepath="$PROJECT_DIR$/basic_java.iml" />
       <module fileurl="file://$PROJECT_DIR$/lcproblems/lcproblems.iml" filepath="$PROJECT_DIR$/lcproblems/lcproblems.iml" />
