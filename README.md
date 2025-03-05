@@ -6,6 +6,7 @@ This repository contains basic Java exercises as part of my internship training.
 - Java Basics
 - Object-Oriented Programming
 - Data Structures
+- Arrays, Strings
 - Loops(for, while, do while, nested loops)
 - Exceptions , File Handling
 
