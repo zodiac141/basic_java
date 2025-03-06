@@ -1,0 +1,62 @@
+Overloading vs. Overriding for Constructors
+Overloading:
+You can overload constructors by defining multiple constructors with different parameter lists within the same class.
+This is useful to provide different ways to initialize an object.
+Overriding:
+Overriding is a concept applicable to regular methods where a subclass changes the behavior of a method defined in its superclass.
+Since constructors are not inherited, they cannot be overridden
+
+Constructors are special methods for initializing objects.
+Default Constructors are provided by the compiler if no constructors are explicitly defined.
+Parameterized Constructors allow initialization with specific values.
+Constructor Overloading enables multiple ways to create an object by having several constructors with different parameters.
+Overriding Constructors is not possible because constructors are not inherited;
+however, constructor chaining using super() can be used to leverage superclass constructors.
+
+
+Why Constructors Cannot Be Overridden
+Method Overriding:
+Overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. This is possible because methods are inherited by subclasses.
+
+Constructors Are Not Inherited:
+
+Constructors belong strictly to the class in which they are declared.
+Since constructors are not inherited, they cannot be overridden.
+Subclasses can, however, call a superclass constructor using the super() call in their own constructor, which is known as constructor chaining.
+Example of Constructor Chaining:
+
+public class Animal {
+    private String name;
+
+    // Parameterized constructor in the superclass
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println("Animal: " + name);
+    }
+}
+
+public class Dog extends Animal {
+    private String breed;
+
+    // Constructor in subclass calls superclass constructor using super()
+    public Dog(String name, String breed) {
+        super(name);  // Calls Animal(String name)
+        this.breed = breed;
+    }
+
+    @Override
+    public void display() {
+        super.display();
+        System.out.println("Breed: " + breed);
+    }
+
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy", "Golden Retriever");
+        dog.display();
+    }
+}
+In the example above, the Dog class calls the Animal class’s constructor using super(name) to initialize the inherited field.
+This is not overriding the constructor but rather ensuring proper initialization.
