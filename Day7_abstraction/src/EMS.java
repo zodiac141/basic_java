@@ -33,20 +33,15 @@ class FulltimeEmployee extends Employee {
         System.out.println("Salary: ₹" + salary);
     }
 }
-
-// Part-time Employee class
 class ParttimeEmployee extends Employee {
     private int hoursWorked;
     private int salary;
-
-    // Constructor
     ParttimeEmployee(String name, int id, int hoursWorked) {
         this.name = name;
         this.id = id;
         this.hoursWorked = hoursWorked;
         this.salary = hoursWorked * 500;
     }
-
     @Override
     void CalculateSalary() {
         System.out.println("Salary based on hours worked: ₹" + salary);
@@ -61,8 +56,6 @@ class ParttimeEmployee extends Employee {
         System.out.println("Salary: ₹" + salary);
     }
 }
-
-// Main EMS class
 public class EMS {
     private static final List<Employee> employees = new ArrayList<>();
     private static final Scanner sc = new Scanner(System.in);
