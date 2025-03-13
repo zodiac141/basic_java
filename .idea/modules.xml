@@ -3,12 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Classes_objects/Classes_objects.iml" filepath="$PROJECT_DIR$/Classes_objects/Classes_objects.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day6_oops/Day6_oops.iml" filepath="$PROJECT_DIR$/Day6_oops/Day6_oops.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day7_abstraction/Day7_abstraction.iml" filepath="$PROJECT_DIR$/Day7_abstraction/Day7_abstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/AccessModifiers/DefaultAccess.iml" filepath="$PROJECT_DIR$/AccessModifiers/DefaultAccess.iml" />
       <module fileurl="file://$PROJECT_DIR$/methodsreview/MethodsReview.iml" filepath="$PROJECT_DIR$/methodsreview/MethodsReview.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic_java.iml" filepath="$PROJECT_DIR$/basic_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3/day3.iml" filepath="$PROJECT_DIR$/day3/day3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day4/day4.iml" filepath="$PROJECT_DIR$/day4/day4.iml" />
       <module fileurl="file://$PROJECT_DIR$/lcproblems/lcproblems.iml" filepath="$PROJECT_DIR$/lcproblems/lcproblems.iml" />
       <module fileurl="file://$PROJECT_DIR$/mock_test/mock_test.iml" filepath="$PROJECT_DIR$/mock_test/mock_test.iml" />
     </modules>

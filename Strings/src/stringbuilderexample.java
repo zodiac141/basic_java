@@ -17,6 +17,8 @@ public static void main(String[] args) {
     System.out.println(sb.charAt(1));
     sb.setCharAt(1, 'A');
     System.out.println(sb);
+    sb.appendCodePoint(0x1F600);
+    System.out.println(sb);
 }
 }
 
@@ -30,3 +32,4 @@ public static void main(String[] args) {
 //StringBuilder sb3 = new StringBuilder(50); // Allocates 50 characters of capacity
 //Use StringBuilder instead of StringBuffer when thread safety is not required.
 //Use StringBuffer when thread safety is required.
+//

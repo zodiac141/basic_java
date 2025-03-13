@@ -1,0 +1,107 @@
+. Definition of Abstraction
+Concept:
+Abstraction is the process of hiding the internal implementation details of a system and exposing only the essential features or behaviors.
+Focus:
+It emphasizes "what" an object does rather than "how" it does it.
+2. Purpose of Abstraction
+Complexity Reduction:
+Simplifies complex systems by modeling classes that represent only the necessary details.
+Modularity:
+Separates the interface (what operations are available) from the implementation (how they are performed).
+Maintainability:
+Changes in implementation do not affect the classes or modules that use the abstraction.
+Reusability:
+Encourages code reuse by defining common contracts for behavior.
+3. Mechanisms for Achieving Abstraction in Java
+Abstract Classes
+Interfaces
+4. Abstract Classes
+Definition:
+A class declared with the keyword abstract. It cannot be instantiated directly.
+Features:
+Abstract Methods:
+Methods declared without an implementation; subclasses must override these methods.
+Concrete Methods:
+Can also contain methods with implementation.
+State and Constructors:
+Can have instance variables, constructors, and fully implemented methods.
+Usage Scenarios:
+When classes share a common base or partial implementation.
+Example Concept:
+An abstract class Vehicle might declare an abstract method move() while providing a concrete method startEngine().
+5. Interfaces
+Definition:
+A completely abstract type used to specify a contract that classes must implement.
+Features:
+Implicitly Abstract Methods:
+All methods are abstract by default (prior to Java 8).
+Default Methods (Java 8+):
+Interfaces can provide a default implementation for methods using the default keyword.
+Static Methods:
+Interfaces can include static methods.
+Multiple Inheritance:
+A class can implement multiple interfaces, supporting multiple inheritance of type.
+Constants:
+Interfaces can have static final variables.
+Usage Scenarios:
+When you want to define capabilities that can be implemented by classes from different hierarchies (e.g., Runnable, Comparable).
+6. Differences Between Abstract Classes and Interfaces
+Inheritance:
+Abstract Class:
+A class can extend only one abstract class.
+Interface:
+A class can implement multiple interfaces.
+Implementation:
+Abstract Class:
+Can provide partial implementation (mix of abstract and concrete methods).
+Interface:
+Defines a pure contract (with exception of default methods in Java 8+).
+State:
+Abstract Class:
+Can have instance variables and constructors.
+Interface:
+Can have only static final constants (no instance state).
+Use Case Consideration:
+Use an abstract class when classes share a common base behavior; use interfaces to define common capabilities across unrelated classes.
+7. Benefits of Abstraction
+Enhanced Readability:
+Users of an abstraction do not need to understand the underlying complexity.
+Loose Coupling:
+Code can work with high-level abstractions (interfaces or abstract classes), making it more flexible and easier to modify.
+Improved Maintainability:
+Changes to the implementation of abstract methods do not affect the code that uses them.
+Flexibility in Design:
+Promotes the development of modular and scalable systems.
+Testing and Mocking:
+Abstractions make it easier to write unit tests and use mock objects.
+8. Abstraction and Encapsulation
+Complementary Concepts:
+Abstraction:
+Focuses on exposing only essential features.
+Encapsulation:
+Bundles data (fields) and methods together and restricts access to internal details.
+Combined Benefit:
+Together, they improve security and integrity by hiding the internal state and implementation details.
+9. Practical Applications of Abstraction
+Framework and API Design:
+Abstract classes and interfaces provide clear contracts for API users.
+Plugin Architectures:
+Abstractions define the common interface that all plugins must implement.
+Design Patterns:
+Many design patterns (e.g., Strategy, Template Method) rely on abstraction to decouple behavior from implementation.
+Real-World Modeling:
+In systems like banking, transportation, and e-commerce, abstraction models real-world entities and behaviors.
+10. Key Keywords and Concepts
+Keywords:
+abstract, interface, default, implements, extends
+Concepts:
+Method Overriding:
+Subclasses must override abstract methods.
+Polymorphism:
+Abstraction enables objects to be treated as instances of their abstract type, allowing for flexible code.
+Contract Programming:
+Interfaces define a contract that implementing classes must adhere to.
+
+
+
+Method overriding for runtime polymorphism and Method overloading for compile time polymorphism
