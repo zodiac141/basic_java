@@ -10,11 +10,15 @@ public class CurrentAccount extends Account {
 
     @Override
     public void createAccount() {
-        if (balance < 10000) {
-            System.out.println("minimum balance not met, account not created");
-        } else {
-            System.out.println("creating a current account for :" + customername + "with account number :" + accountnumber + "with balance :" + balance + "and overdraftlimit of :" + overDraftLimit + "%");
-
+        try{
+            if (balance < 10000) {
+                throw new InvalidOpeningBalanceException("minimum balance for current account required is 10000, current balance is " + balance + " account not created");
+            } else {
+                System.out.println("creating a current account for :" + customername + "with account number :" + accountnumber + "with balance :" + balance + "and overdraftlimit of :" + overDraftLimit + "%");
+            }
+        }
+        catch (InvalidOpeningBalanceException e){
+           e.printStackTrace();
         }
     }
 }

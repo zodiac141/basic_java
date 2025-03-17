@@ -9,6 +9,7 @@ public class BankingApplication {
         String accounttype = scanner.nextLine();
        if(accounttype.equals("Savings")){
            SavingsAccount account=new SavingsAccount("Faraan",700);
+
            account.createAccount();
        }else if(accounttype.equals("Current")){
            CurrentAccount account=new CurrentAccount("Faraan",800);

@@ -10,11 +10,17 @@ public class SavingsAccount extends Account {
 
     @Override
     public void createAccount() {
-        if (balance < 5000) {
-            System.out.println("minimum balance not met, account not created");
-        } else {
-            System.out.println("creating a savings account for :" + customername + " with account number :" + accountnumber + " with balance :" + balance + " and interest rate :" + interestRate + "%");
-
+        try {
+            if (balance < 5000) {
+                throw new InvalidOpeningBalanceException("minimum balance for savings required is 5000, current balance is " + balance + " account not created");
+            } else {
+                System.out.println("creating a savings account for :" + customername + " with account number :" + accountnumber + " with balance :" + balance + " and interest rate :" + interestRate + "%");
+            }
         }
+        catch(InvalidOpeningBalanceException e){
+
+                e.printStackTrace();
+            }
+
     }
 }
