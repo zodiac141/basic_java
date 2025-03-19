@@ -1,6 +1,5 @@
 package day6;
 
-import javax.smartcardio.Card;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
