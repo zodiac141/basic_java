@@ -1,4 +1,4 @@
-package BankingApplication;
+package bankingapplication;
 
 import java.util.List;
 

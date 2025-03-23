@@ -1,4 +1,4 @@
-package BankingApplication;
+package bankingapplication;
 
 public class InsufficientBalanceException extends RuntimeException {
     public InsufficientBalanceException(String message) {

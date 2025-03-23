@@ -1,4 +1,4 @@
-package BankingApplication;
+package bankingapplication;
 
 import java.util.UUID;
 //used UUID for unique account number for each customer which is generated automatically by the system and is secure.

@@ -1,5 +1,6 @@
-package BankingApplication;
+package bankingapplication;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class BankApplication {
@@ -25,12 +26,14 @@ public class BankApplication {
                     scanner.nextLine();
                     double balance = scanner.nextDouble();
                     Account newaccount=transaction.createAccount(name,balance);
-                    System.out.println("Account created successfully");
+                    LocalDateTime date = LocalDateTime.now();
+                    System.out.println("Account created successfully on " + date);
                     System.out.println("Account Number- " + newaccount.getAccountNumber());
 
                     System.out.println("Account Name- " + newaccount.getCustomerName());
 
                     System.out.println(" balance- Rs." + newaccount.getBalance());
+
                     break;
 
                 case 'd':

@@ -1,9 +1,10 @@
-package BankingApplication;
+package bankingapplication;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
+import java.util.function.Predicate;
+
 
 public class TransactionImps implements Transaction {
 
@@ -18,9 +19,13 @@ public class TransactionImps implements Transaction {
     }
 
     private Account findAccount(long accountNumber) {
-        return accounts.stream().filter(account -> account.getAccountNumber()
-                        .equals(String.valueOf(accountNumber)))
-                .findFirst().orElse(null);
+        Predicate<Account> matchaccount=account->account.getAccountNumber()
+                .equals(String.valueOf(accountNumber));
+
+        return accounts.stream()
+                .filter(matchaccount)
+                .findFirst()
+                .orElse(null);
     }
     @Override
     public double deposit(long accountNumber, double amount) {
