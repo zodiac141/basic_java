@@ -1,25 +1,30 @@
 package bankingapplication;
 
-import java.util.UUID;
-//used UUID for unique account number for each customer which is generated automatically by the system and is secure.
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 class Account {
     private final String accountNumber;
     private String customerName;
     private double balance;
+    private final String datentime;
 
-    public Account(String customerName, double balance) {
-        this.accountNumber = generateNumericAccountNumber();
+    public Account(String accountNumber, String customerName, double balance) {
+        this.accountNumber = accountNumber;
         this.customerName = customerName;
         this.balance = balance;
+        this.datentime = getCurrentTimestamp();
     }
-    private String generateNumericAccountNumber() {
-        String uuid = UUID.randomUUID().toString().replaceAll("[^0-9]", "");
-        if (uuid.length() < 10) {
 
-            uuid += String.valueOf((int) (Math.random() * 1000000));
-        }
-        return uuid.substring(0, 10);
+    /**
+     * Returns the current timestamp as a formatted string.
+     * The format used is "yyyy-MM-dd HH:mm:ss".
+     *
+     * @return the current timestamp in the specified format
+     */
+    private String getCurrentTimestamp() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return LocalDateTime.now().format(formatter);
     }
 
     public String getAccountNumber() {
@@ -34,6 +39,10 @@ class Account {
         return balance;
     }
 
+    public String DateNTime() {
+        return datentime;
+    }
+
     public void setBalance(double balance) {
         this.balance = balance;
     }
@@ -44,6 +53,7 @@ class Account {
                 "accountNumber='" + accountNumber + '\'' +
                 ", customerName='" + customerName + '\'' +
                 ", balance=" + balance +
+                ", creationTime='" + datentime + '\'' +
                 '}';
     }
 }

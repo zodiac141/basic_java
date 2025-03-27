@@ -26,14 +26,6 @@ public class BankApplication {
                     scanner.nextLine();
                     double balance = scanner.nextDouble();
                     Account newaccount=transaction.createAccount(name,balance);
-                    LocalDateTime date = LocalDateTime.now();
-                    System.out.println("Account created successfully on " + date);
-                    System.out.println("Account Number- " + newaccount.getAccountNumber());
-
-                    System.out.println("Account Name- " + newaccount.getCustomerName());
-
-                    System.out.println(" balance- Rs." + newaccount.getBalance());
-
                     break;
 
                 case 'd':
@@ -43,8 +35,6 @@ public class BankApplication {
                     System.out.print("Enter amount to deposit: ");
                     double depositAmount = scanner.nextDouble();
                     double newBalance = transaction.deposit(Long.parseLong(accNumDeposit), depositAmount);
-                    System.out.println("Deposit successful! New Balance: " + newBalance);
-
                     break;
 
                 case 'w':
@@ -54,8 +44,6 @@ public class BankApplication {
                     System.out.print("Enter amount to withdraw: ");
                     double withdrawAmount = scanner.nextDouble();
                     double withdrawBalance = transaction.withdraw(Long.parseLong(accNumWithdraw), withdrawAmount);
-                    System.out.println("Withdrawal successful! New Balance: " + withdrawBalance);
-
                     break;
 
                 case 'b':
@@ -63,15 +51,12 @@ public class BankApplication {
                     scanner.nextLine();
                     String accNumCheck = scanner.nextLine();
                     double checkbalance = transaction.checkBalance(Long.parseLong(accNumCheck));
-                    System.out.println("Current Balance: " + checkbalance);
-
                     break;
 
                 case 's':
                     System.out.print("Enter Account Number: ");
                     scanner.nextLine();
                     String accNumStatement = scanner.nextLine();
-                    System.out.println("Account Statement: " + transaction.viewStatement(Long.parseLong(accNumStatement)));
 
                     break;
 

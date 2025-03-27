@@ -9,4 +9,5 @@ public interface Transaction {
     double checkBalance(long accountNumber);
 
     List<Account> viewStatement(long accountNumber);
+
 }
